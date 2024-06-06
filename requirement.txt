@@ -5,4 +5,4 @@ einops
 accelerate
 tiktoken
 pytorch
-lmdeploy[all]==0.3.0
+LMDeploy[all]==0.3.0
