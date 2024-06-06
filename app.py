@@ -1,7 +1,7 @@
 import os
 import gradio as gr
-import lmdeploy
-from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig, ChatTemplateConfig
+import LMDeploy
+from LMDeploy import pipeline, GenerationConfig, TurbomindEngineConfig, ChatTemplateConfig
 from typing import Generator, Any
 
 
