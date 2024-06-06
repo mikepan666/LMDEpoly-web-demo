@@ -1,21 +1,12 @@
-import os
 import gradio as gr
-import lmdeploy
-from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig, ChatTemplateConfig
-from typing import Generator, Any
+import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
 
-
-print("lmdeploy version: ", lmdeploy.__version__)
-print("gradio version: ", gr.__version__)
-
-
-# clone 模型
-MODEL_PATH = './models/internlm2-chat-1_8b'
-os.system(f'git clone -b master https://code.openxlab.org.cn/mikepan666/lmdepoly.git {MODEL_PATH}')
-os.system(f'cd {MODEL_PATH} && git lfs pull')
-
+# download internlm2 to the base_path directory using git tool
+base_path = './internlm2-chat-1.8b'
+os.system(f'git clone https://code.openxlab.org.cn/mikepan666/lmdepoly.git {base_path}')
+os.system(f'cd {base_path} && git lfs pull')
 
 tokenizer = AutoTokenizer.from_pretrained(base_path,trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(base_path,trust_remote_code=True, torch_dtype=torch.float16).cuda()
@@ -25,7 +16,7 @@ def chat(message,history):
         yield response
 
 gr.ChatInterface(chat,
-                 title="InternLM2-Chat-1.8b",
+                 title="InternLM2-Chat-1.8B",
                 description="""
 InternLM is mainly developed by Shanghai AI Laboratory.  
                  """,
