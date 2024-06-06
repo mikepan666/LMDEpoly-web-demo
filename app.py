@@ -2,7 +2,7 @@ import gradio as gr
 import os
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
-pip install sentencepiece
+
 
 
 # download internlm2 to the base_path directory using git tool
