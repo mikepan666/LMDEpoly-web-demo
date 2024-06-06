@@ -4,3 +4,5 @@ sentencepiece
 einops
 accelerate
 tiktoken
+pytorch
+lmdeploy[all]==0.3.0
