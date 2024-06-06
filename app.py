@@ -1,7 +1,7 @@
 import gradio as gr
 import os
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
+from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel,sentencepiece
 
 # download internlm2 to the base_path directory using git tool
 base_path = './internlm2-chat-1_8B'
