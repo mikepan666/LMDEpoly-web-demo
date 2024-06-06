@@ -1,8 +1,7 @@
-gradio==4.10.0
+gradio>4
 transformers
 sentencepiece
 einops
 accelerate
 tiktoken
-pytorch
-LMDeploy[all]==0.3.0
+lmdeploy>=0.4.0
