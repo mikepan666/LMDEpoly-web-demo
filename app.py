@@ -1,6 +1,6 @@
 import os
 import gradio as gr
-from lmdeploy import pipeline, TurbomindEngineConfig
+from lmdeploy[all]==0.3.0 import pipeline, TurbomindEngineConfig
 
 base_path = './internlm2-chat-1_8b' # 已W4A16量化
 os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/internlm2-chat-1.8b.git {base_path}')
