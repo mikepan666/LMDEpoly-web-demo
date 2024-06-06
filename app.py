@@ -11,7 +11,7 @@ print("gradio version: ", gr.__version__)
 
 # clone 模型
 MODEL_PATH = './models/internlm2-chat-1_8b'
-os.system(f'git clone https://code.openxlab.org.cn/OpenLMLab/internlm2-chat-1.8b {MODEL_PATH}')
+os.system(f'git git clone https://code.openxlab.org.cn/xover/LM_deploy.git {MODEL_PATH}')
 os.system(f'cd {MODEL_PATH} && git lfs pull')
 
 
