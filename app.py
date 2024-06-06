@@ -1,5 +1,7 @@
 import os
 import gradio as gr
+import lmdeploy
+from lmdeploy import pipeline, GenerationConfig, TurbomindEngineConfig, ChatTemplateConfig
 from typing import Generator, Any
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
